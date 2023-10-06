@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box
+}
+
+/**GLOBAL**/
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8rem;
+    line-height: 2;
+    margin: 0;
+    color: #000000;
+}
+
+.btn_panier {
+    width: 100%;
+}
+
+.duo_bacckground {
+    background-color: #eeeeee;
+}
+
+#vertical_border {
+    border-right: 2px ridge;
+}
+
+#horizontal_border {
+    border-bottom: 1px ridge;
+}
+
+#general_info_border {
+    background-color: #eeeeee;
+}
