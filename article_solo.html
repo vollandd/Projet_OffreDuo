@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Paiement</title>
+    <!-- Inclure les fichiers CSS de Materialize -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper white">
+            <a href="index.html" class="brand-logo black-text">Chausse-toi</a>
+            <ul class="right">
+                <li><a href="article_solo.html" class="waves-effect waves-light btn black"><i
+                            class="material-icons left">shopping_cart</i>Panier</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container center">
+        <h2>Chausse-toi</h2>
+        <div class="row">
+            <div class="col s12 m6">
+                <!-- Image du produit -->
+                <img src="img/5c5ef793e4b8dd029ff25aa5.png" alt="Image du produit" class="responsive-img" width="205">
+            </div>
+            <div class="col s12 m6 border">
+                <!-- Description du produit -->
+                <h5>Chausse pied de voyage</h5>
+                <p>Trou pour accrocher - s'adapte facilement dans la valise pour voyager - parfait pour la fermeture de
+                    voyage et de stockage</p>
+                <ul>
+                    <li>Livré chez vous dès après-demain</li>
+                    <li>Livré en point retrait dès après-demain</li>
+                    <li>Expédié depuis nos entrepôts régionaux français</li>
+                </ul>
+                <p>Prix : 6.99€</p>
+                <div class="btn__margin">
+                    <a href="article_duo.html"><button id="blink-button" class="btn waves-effect waves-light">Article
+                            duo 40% de remise</button></a>
+                </div>
+            </div>
+        </div>
+
+        <h4>Information de livraison</h4>
+        <form id="contact-form">
+            <!-- Champs d'informations du client -->
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" id="first-name" placeholder="Nom & Prénom">
+                    <label for="first-name">Nom & prénom</label>
+                </div>
+                <div class="input-field col s6 ">
+                    <input type="email" id="email" placeholder="Adresse e-mail">
+                    <label for="email">E-mail</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="text" id="adresse" placeholder="Adresse de livraison">
+                    <label for="adresse">Adresse de livraison</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" id="cp" placeholder="Code postal">
+                    <label for="cp">Code postal</label>
+                </div>
+                <div class="input-field col s6">
+                    <input type="text" id="ville" placeholder="Ville">
+                    <label for="ville">Ville</label>
+                </div>
+            </div>
+        </form>
+
+        <button id="show-popup" class="btn waves-effect waves-light m__b">Payer maintenant</button>
+
+        <div id="payment-popup" class="popup">
+            <div class="popup-content">
+                <h3>Information de Paiement</h3>
+                <form>
+                    <!-- Champs du formulaire de paiement -->
+                    <div class="input-field">
+                        <input id="card-number" type="text" placeholder="Numéro de carte">
+                        <label for="card-number">Numéro de carte</label>
+                    </div>
+                    <div class="input-field">
+                        <input id="expiry-date" type="text" placeholder="MM/YY">
+                        <label for="expiry-date">Date d'expiration</label>
+                    </div>
+                    <div class="input-field">
+                        <input id="cvv" type="text" placeholder="CVV">
+                        <label for="cvv">CVV</label>
+                    </div>
+                </form>
+                <button id="show-popup-2" class="btn waves-effect waves-light">Payez maintenant</button>
+
+            </div>
+        </div>
+
+        <!-- Popup avec notification de paiement validé -->
+        <div id="payment-confirmed-popup" class="popup">
+            <div class="popup-content">
+                <h3>Paiement Validé</h3>
+                <p>Votre paiement a été traité avec succès.</p>
+                <button id="close-popup" class="btn waves-effect waves-light">Fermer</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Inclure les fichiers JavaScript de Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        // Afficher la popup lorsque le bouton est cliqué
+        document.getElementById('show-popup').addEventListener('click', function () {
+            document.getElementById('payment-popup').style.display = 'block';
+        });
+
+        // Fermer la popup lorsque le bouton de fermeture est cliqué
+        document.getElementById('close-popup').addEventListener('click', function () {
+            document.getElementById('payment-popup').style.display = 'none';
+        });
+
+
+        document.getElementById('show-popup-2').addEventListener('click', function () {
+            document.getElementById('payment-confirmed-popup').style.display = 'block';
+        });
+
+        // Fermer la popup lorsque le bouton de fermeture est cliqué
+        document.getElementById('close-popup').addEventListener('click', function () {
+            document.getElementById('payment-confirmed-popup').style.display = 'none';
+        });
+
+        function toggleBlink() {
+            const button = document.getElementById('blink-button');
+            button.classList.toggle('blink');
+        }
+    </script>
+
+</body>
+
+</html>

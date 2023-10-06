@@ -10,17 +10,20 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.8rem;
     line-height: 2;
     margin: 0;
     color: #000000;
+}
+
+.brand-logo {
+    margin-left: 2%;
 }
 
 .btn_panier {
     width: 100%;
 }
 
-.duo_bacckground {
+.border_color {
     background-color: #eeeeee;
 }
 
@@ -32,6 +35,41 @@ body {
     border-bottom: 1px ridge;
 }
 
-#general_info_border {
-    background-color: #eeeeee;
+.margin_top {
+    margin-top: 5%;
+}
+
+.border {
+    border: 1px solid #000000;
+    padding: 8px;
+}
+
+.m__b {
+    margin-bottom: 50px;
+}
+
+.btn__margin {
+    margin-bottom: 12px;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
